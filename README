@@ -1,0 +1,27 @@
+This Application is to allow participants who are to conduct a health survey register with username password and invitation code.
+There will be 4 different surveys, of which one must be completed (Mag0) and 2 out of the other 3 must be completed. Therefore the survey 
+consist of 3 surveys or in the test case 3 questions.
+
+First surveys is always the one that is mandatory for all participants. Other 2 will be randomly chosen and randomly placed in order of
+appearance.
+
+For the test case only data that is saved to the database is registration information, login, placement of surveys for each participant.
+
+For the test case the actual surveys themselves will not be evaluated for validity nor saved to database.
+
+For the test case frontend ajax script is used to check if the username as already been saved in the database and to indicate in real time
+after clicking on the next textbox.
+
+This application therefore can be improved using frontend javascript and ajax instead of server side validation.
+
+For the test case the look and feel are not important as long as it allows functionality.
+
+For the test case, the surveys are within scope and same server, however, in real case that is not so. Therefore it is assumed that the
+participant is redirected to the survey website with GET HTTP information and is returned to a particular page back to the server to allow
+for the next question/survey. Therefore random.php page has been created for update function rather than a class user update function
+
+header('location:http://mysurvey.server.domain.com/applicationsurvey?id=xxx&counter=x&study=Magx')
+
+terminating link to survey must be
+
+http://likejagger.com/phpCF/random.php?id=xxx&counter=x&study=Magx
